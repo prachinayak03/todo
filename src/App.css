@@ -1,0 +1,20 @@
+body{
+    display: flex;
+    height: 100vh;
+    justify-content:center;
+    align-items: center;
+    background-image:url('./assets/purple flower.jpg');
+    background-size: cover;
+       
+}
+
+.main-container{
+    max-width: 600px;
+    background:linear-gradient(to bottom right, rgb(125, 35, 125), rgb(13 ,3, 44)) ;
+}
+
+.container-fluid{
+    border-radius: 8px;
+    
+    }
+    
