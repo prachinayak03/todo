@@ -30,7 +30,9 @@
   const AddHandler =(name , date) => {
     setItems([{name,date }, ...items])
   }
-
+  const deleteHandler = (name)=>{
+    setItems(items.filter(el => el.name !== name))
+  }
   
    return (
     
@@ -38,14 +40,10 @@
   
     <Logo/>
     <Additems AddHandler={AddHandler}/>
-    <Addlist items={items}/>
+    <Addlist deleteHandler={deleteHandler} items={items}/>
      </div>
    )
  }
  
  export default App
  
-
-
-
-
