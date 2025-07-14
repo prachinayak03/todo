@@ -12,20 +12,7 @@
  const myStyle ={
   backgroundImages:`url(${purple})`, backgroundSize:'cover' , backgroundRepeat:'no-repeat' 
   }
-  const[items , setItems] = useState([
-    {
-      name:"Go to Bhopal",
-      date:"2025/02/23",
-    },
-    {
-      name:"Go to Indore",
-      date:"2025/02/25",
-    },
-    {
-      name:"Go to ujjain",
-      date:"2025/02/26",
-    },
-  ])
+  const[items , setItems] = useState([])
 
   const AddHandler =(name , date) => {
     setItems([{name,date }, ...items])
@@ -40,7 +27,7 @@
   
     <Logo/>
     <Additems AddHandler={AddHandler}/>
-    <Addlist deleteHandler={deleteHandler} items={items}/>
+    {items.length == 0 ? <Message /> : < Addlist deleteHandler={deleteHandler} items={items} />}
      </div>
    )
  }
